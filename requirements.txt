@@ -2,5 +2,5 @@ streamlit
 requests
 pandas
 numpy
-scikit-learn
-os
+scikit-learn==1.2.2
+pickle5
