@@ -3,6 +3,12 @@ import pickle
 import pandas as pd
 import os
 import requests
+@st.cache_resource
+def load_data():
+    # Make sure these names match the files in your folder EXACTLY
+    movies = pickle.load(open('movies_dict.pkl', 'rb')) 
+    similarity = pickle.load(open('similarity.pkl', 'rb'))
+    return movies, similarity
 def fetch_poster(movie_id):
     response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US'.format(movie_id))
     data = response.json()
