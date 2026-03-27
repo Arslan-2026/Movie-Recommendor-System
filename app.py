@@ -52,14 +52,4 @@ if st.button('Recommend'):
     with col5:
         st.header(names[4])
         st.image(posters[4])
-
-cd "C:\Users\dell\ML Projects\Movie Recommender System"
-git init
-git lfs install
-git lfs track "*.pkl"
-git add .gitattributes
-git add .
-git commit -m "Initial commit - Movie Recommender System"
-git branch -M main
-git remote add origin https://github.com/Arslan-2026/Movie-Recommendor-System.git
-git push -u origin main
+        
